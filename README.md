@@ -1,12 +1,11 @@
-## Conditions
-de nuit
+# What is it ?
 
-## Structure
-impaire
+With this Minecraft datapack, you cane make your own artefacts with the Hephaistos' forge ! With this simple datapack, you can easily have a Role Play solution to create items that are more important than others to animate your RP on your SMP server.
 
-## Prix
-utiliser tête d'un autre joueur
+# How use it ?
 
-## Annimations processus
-### Echec du processus
-(sound) minecraft:entity.wither.hurt
+Coming Soon
+
+# Credits
+
+Forging circles generated with [Alchemy-Circles-Generator](https://github.com/CiaccoDavide/Alchemy-Circles-Generator)
