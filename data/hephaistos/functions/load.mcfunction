@@ -1,15 +1,20 @@
-scoreboard objectives add ha_playerSneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add hs_playerSneak minecraft.custom:minecraft.sneak_time
 
 
-scoreboard objectives add ha_data dummy
-execute unless score alreadyLoaded ha_data matches 1 run scoreboard players set altarUniqueID ha_data 0
-execute unless score alreadyLoaded ha_data matches 1 run scoreboard players set alreadyLoaded ha_data 1
+scoreboard objectives add hs_data dummy
+execute unless score alreadyLoaded hs_data matches 1 run scoreboard players set altarUniqueID hs_data 0
+execute unless score alreadyLoaded hs_data matches 1 run scoreboard players set alreadyLoaded hs_data 1
 
-scoreboard objectives add ha_structuredetection dummy
 
-scoreboard objectives add ha_altarmarkers dummy
+# Stock item frames with a nether star in them already checked
+scoreboard objectives add hs_structuredetection dummy
 
-scoreboard objectives add ha_altarId dummy
+scoreboard objectives add hs_altarId dummy
+scoreboard objectives add hs_altarmarkers dummy
+scoreboard objectives add hs_items dummy
+
+
+
 
 
 function hephaistos:altarcore/checkstructure
