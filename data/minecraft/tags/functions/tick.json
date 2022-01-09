@@ -1,6 +1,7 @@
 {
     "values": [
         "hephaistos:structure/detectnew",
-        "hephaistos:altarcore/catalystitems"
+        "hephaistos:altarcore/catalystitems",
+        "hephaistos:altarcore/altartick"
     ]
 }

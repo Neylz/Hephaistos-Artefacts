@@ -10,7 +10,7 @@ execute as @e[type=item_frame,scores={ha_structuredetection=1}] run scoreboard p
 execute as @e[type=marker,tag=ha_structure] run execute as @s at @s positioned ~ ~ ~ if predicate hephaistos:altar_structure run tag @s add ha_structureverified
 kill @e[type=marker,tag=ha_structure,tag=!ha_structureverified]
 execute as @e[type=marker,tag=ha_structureverified] at @s positioned ~ ~ ~ if entity @e[distance=..1,limit=1,sort=nearest,type=marker,nbt={data:{ha:{altar_center:1b}}}] run kill @s
-execute as @e[type=marker,tag=ha_structureverified] run execute as @s at @s run function hephaistos:structure/structureactivate
+execute as @e[type=marker,tag=ha_structureverified] run execute as @s at @s positioned ~ ~ ~ run function hephaistos:structure/structureactivate
 
 
 # item_frame :

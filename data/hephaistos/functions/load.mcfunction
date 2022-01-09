@@ -1,12 +1,15 @@
 scoreboard objectives add ha_playerSneak minecraft.custom:minecraft.sneak_time
 
 
+scoreboard objectives add ha_data dummy
+execute unless score alreadyLoaded ha_data matches 1 run scoreboard players set altarUniqueID ha_data 0
+execute unless score alreadyLoaded ha_data matches 1 run scoreboard players set alreadyLoaded ha_data 1
 
 scoreboard objectives add ha_structuredetection dummy
 
 scoreboard objectives add ha_altarmarkers dummy
 
-
+scoreboard objectives add ha_altarId dummy
 
 
 function hephaistos:altarcore/checkstructure
