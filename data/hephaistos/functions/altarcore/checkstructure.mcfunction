@@ -1,0 +1,2 @@
+execute as @e[type=marker,nbt={data:{ha:{altar_center:1b}}}] at @s positioned ~ ~ ~ unless predicate hephaistos:altar_structure run execute as @s at @s positioned ~ ~ ~ run function hephaistos:structure/structuredestroyed
+schedule function hephaistos:altarcore/checkstructure 40t
