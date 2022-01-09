@@ -1,4 +1,4 @@
-scoreboard objectives remove playerSneak
+scoreboard objectives remove ha_playerSneak
 
 
 scoreboard objectives remove ha_structuredetection

@@ -1,4 +1,4 @@
-scoreboard objectives add playerSneak minecraft.custom:minecraft.sneak_time
+scoreboard objectives add ha_playerSneak minecraft.custom:minecraft.sneak_time
 
 
 
