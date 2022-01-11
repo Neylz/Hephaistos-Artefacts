@@ -15,6 +15,8 @@ scoreboard objectives add hs_items dummy
 
 
 
+# import crafting
+function hephaistos:crafting/initialize/import
 
 
 function hephaistos:altarcore/checkstructure
