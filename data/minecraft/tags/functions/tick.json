@@ -2,10 +2,6 @@
     "values": [
         "hephaistos:structure/detectnew",
         "hephaistos:altarcore/catalystitems",
-        "hephaistos:altarcore/altartick",
-
-
-
-        "hephaistos:crafting/recipes/helpbook"
+        "hephaistos:altarcore/altartick"
     ]
 }

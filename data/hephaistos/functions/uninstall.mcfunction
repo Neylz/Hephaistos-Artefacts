@@ -12,4 +12,4 @@ scoreboard objectives remove hs_altarId
 
 
 # crafts
-scoreboard objectives remove hs_importCrafts
+scoreboard objectives remove hs_craftsLoaded
