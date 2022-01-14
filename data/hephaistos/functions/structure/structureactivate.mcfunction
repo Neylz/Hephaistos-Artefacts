@@ -6,7 +6,7 @@ setblock ~3 ~-2 ~ structure_block{powered:0b,author:"Neylz",posX:-7,posY:0,posZ:
 setblock ~3 ~-1 ~ redstone_block
 setblock ~3 ~-2 ~ diamond_block
 
-execute as @s at @s positioned ~ ~-1 ~ run function hephaistos:alchemycircles/altarcomplete
+execute as @s at @s positioned ~ ~-1 ~ run function hephaistos:particles/alchemycircles/altarcomplete
 
 
 #generate altar structure (markers)
