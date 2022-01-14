@@ -4,4 +4,4 @@ execute as @e[type=marker,nbt={data:{ha:{item_catalyst:1b}}}] if score @s hs_alt
 execute as @e[type=marker] if score @s hs_altarmarkers = @e[tag=hs_altarDeletion,limit=1] hs_altarId run kill @s
 
 
-playsound minecraft:block.glass.break master @a ~ ~-1 ~ 1000
+playsound minecraft:block.beacon.deactivate master @a ~ ~-1 ~ 1000
