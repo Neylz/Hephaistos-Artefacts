@@ -1,5 +1,5 @@
 #teleport near item to the marker
-execute as @e[type=marker,nbt={data:{ha:{item_catalyst:1b}}}] at @s run tp @e[type=item,limit=1,sort=nearest,distance=..1] @s
+execute as @e[type=marker,nbt={data:{ha:{item_catalyst:1b}}}] at @s run tp @e[type=item,limit=1,sort=nearest,distance=..1,nbt={Glowing:1b}] @s
 
 
 #modify data of the items on the item_catalyst
