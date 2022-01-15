@@ -10,7 +10,7 @@ execute as @s at @s positioned ~ ~-1 ~ run function hephaistos:particles/alchemy
 
 
 #generate altar structure (markers)
-summon marker ~ ~ ~ {data:{ha:{altar_center:1b,haveItem:0b}}}
+summon marker ~ ~ ~ {data:{ha:{item_catalyst:1b,altar_center:1b,haveItem:0b}}}
 
 summon marker ~3 ~-1 ~ {data:{ha:{item_catalyst:1b,placeId:0,haveItem:0b}}}
 summon marker ~2 ~-1 ~2 {data:{ha:{item_catalyst:1b,placeId:1,haveItem:0b}}}
