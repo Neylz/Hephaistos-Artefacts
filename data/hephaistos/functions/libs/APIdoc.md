@@ -4,7 +4,7 @@ Hephaistos Rituals is a new craft system that give you possibility to adds your 
 
 You can also just offer to players to have a new way to crafts the custom items you developed. Having the crafts files without Hephaistos isn't a problem ! If you wants, you can also just add compatibility for the players !
 
-### Benefits of Using the Hephaitsos' altar
+### Benefits of Using the Hephaistos' altar
 The altar is used to craft items with 9 items - like in a crafting table - but you have the opportunity in addition to having very cool animations and a magical manufacturing method, to craft items with NBTs; YES ! It's NBT crafting time ! (So you can finally craft a custom book with instructions or commands in it)
 
 ### Structure of a craft
@@ -21,7 +21,41 @@ So a craft would have this IDs :
 
 
 
-# Add a craft
+# Implements new crafts
+## Global Strucure
+Here is an exemple of strucure for your datapack; after adding the crafts you can add your own features.
+```
+root/
+    data/
+        <namespace>/
+            functions/
+                hscrafts/
+                    call.mcfunction
+                    call.list.mcfunction
+                    recipes/
+                        <recipe1>.mcfunction
+                        <recipe2>.mcfunction
+                        <recipe3>.mcfunction
+        
+        minecraft/
+            tags/
+                functions/
+                    tick.json
+
+pack.mcmeta
+```
+
+## Caller
+The caller is a looped function checking if an altar need to check your crafts or import them.
+
+So in `root/data/minecraft/tags/functions/tick`, insert the path of `call.mcfunction`. Here in our exemple it will looks like this:
+```json
+{
+    "values": [
+        "<namespace>:hscrafts/call"
+    ]
+}
+```
 
 
 # Effects & Visuals
