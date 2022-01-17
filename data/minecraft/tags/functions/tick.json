@@ -2,6 +2,10 @@
     "values": [
         "hephaistos:structure/detectnew",
         "hephaistos:altarcore/catalystitems",
-        "hephaistos:altarcore/altartick"
+        "hephaistos:altarcore/altartick",
+
+
+
+        "hephaistos:crafting/tick"
     ]
 }

@@ -11,12 +11,31 @@ scoreboard objectives add hs_structuredetection dummy
 
 scoreboard objectives add hs_altarId dummy
 scoreboard objectives add hs_altarmarkers dummy
-scoreboard objectives add hs_items dummy
 
+
+# crafting scoreboards
+## (import only one time each namespace)
+scoreboard objectives add hs_namespaceLoaded dummy
+## (RAM) wich items are on altar when craft a new item
+scoreboard objectives add hs_crafting_itemsRAM dummy
+## already checked namespace for crafting
+scoreboard objectives add hs_crafting_namesapceCheked dummy
+## list of crafts loaded
+scoreboard objectives add hs_craftsLoaded dummy
+## check stages for each crafts
+scoreboard objectives add hs_crafting_craftsStages dummy
 
 
 # import crafting
-function hephaistos:crafting/initialize/import
+## reset scoreboard
+scoreboard players reset * hs_craftsLoaded
+scoreboard players reset * hs_namespaceLoaded
+scoreboard players reset * hs_crafting_itemsRAM
+
+scoreboard players set craftingOnAltar hs_data -1
+scoreboard players set craftsLoaded hs_data 0
+scoreboard players set loadingCrafts hs_data 1
+schedule function hephaistos:altarcore/stoploadingrecipes 1s
 
 
 #init loops
