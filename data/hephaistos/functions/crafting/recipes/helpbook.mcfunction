@@ -81,8 +81,7 @@ execute as @s at @s if score hephaistos:helpbook hs_crafting_craftsStages matche
 
 
 
-
+# reset altars (tag)
+execute as @s at @s if score hephaistos:helpbook hs_crafting_craftsStages matches 11 run tag @e[type=minecraft:marker,distance=..7] remove hs_crafting
 #finish the process & prevent double crafts
 execute if score hephaistos:helpbook hs_crafting_craftsStages matches 11 run scoreboard players set craftsChecked hs_crafting_itemsRAM -2
-# reset altars (tag)
-execute if score hephaistos:helpbook hs_crafting_craftsStages matches 11 run tag @e[type=marker,distance=..7] remove hs_crafting
