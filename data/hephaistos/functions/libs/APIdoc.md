@@ -30,8 +30,8 @@ root/
         <namespace>/
             functions/
                 hscrafts/
-                    call.mcfunction
-                    call.list.mcfunction
+                    tick.mcfunction
+                    recipes.list.mcfunction
                     recipes/
                         <recipe1>.mcfunction
                         <recipe2>.mcfunction
