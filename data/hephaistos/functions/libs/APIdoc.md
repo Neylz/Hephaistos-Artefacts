@@ -59,3 +59,9 @@ So in `root/data/minecraft/tags/functions/tick`, insert the path of `call.mcfunc
 
 
 # Effects & Visuals
+
+You can adds your visuals  or annimations easly in the craft !
+
+### Create my own with Hephaistos tools
+
+-> coming soon
