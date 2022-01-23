@@ -17,3 +17,4 @@ scoreboard objectives remove hs_crafting_namesapceCheked
 scoreboard objectives remove hs_craftsLoaded
 scoreboard objectives remove hs_namespaceLoaded
 scoreboard objectives remove hs_crafting_craftsStages
+scoreboard objectives remove hs_crafting_itemsCounting

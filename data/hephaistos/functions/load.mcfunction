@@ -24,13 +24,15 @@ scoreboard objectives add hs_crafting_namesapceCheked dummy
 scoreboard objectives add hs_craftsLoaded dummy
 ## check stages for each crafts
 scoreboard objectives add hs_crafting_craftsStages dummy
-
+## checking items on altar
+scoreboard objectives add hs_crafting_itemsCounting dummy
 
 # import crafting
 ## reset scoreboard
 scoreboard players reset * hs_craftsLoaded
 scoreboard players reset * hs_namespaceLoaded
 scoreboard players reset * hs_crafting_itemsRAM
+scoreboard players reset * hs_crafting_itemsCounting
 
 scoreboard players set craftingOnAltar hs_data -1
 scoreboard players set craftsLoaded hs_data 0
