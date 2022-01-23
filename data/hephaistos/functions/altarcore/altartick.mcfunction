@@ -19,5 +19,5 @@ execute as @e[tag=hs_craftRejected] at @s positioned ~ ~ ~ run tag @e[type=minec
 execute as @e[tag=hs_craftRejected] at @s positioned ~ ~ ~ run data modify entity @e[type=minecraft:item,limit=1,distance=..1,nbt={Glowing:1b}] Glowing set value 0b
 execute as @e[tag=hs_craftRejected] at @s positioned ~ ~ ~ run tag @e[type=marker,distance=..7] remove hs_crafting
 execute as @e[tag=hs_craftRejected] run scoreboard players set craftingOnAltar hs_data -1
-execute as @e[tag=hs_craftRejected] at @s positioned ~ ~ ~ run data modify entity @e[type=minecraft:item,limit=1,distance=..1] PickupDelay set value 10
+execute as @e[tag=hs_craftRejected] at @s positioned ~ ~ ~ run execute as @e[type=item,distance=..1] run data modify entity @s PickupDelay set value 10
 execute as @e[tag=hs_craftRejected] run tag @s remove hs_craftRejected
