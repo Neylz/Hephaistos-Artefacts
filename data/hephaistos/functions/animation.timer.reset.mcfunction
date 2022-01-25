@@ -1,0 +1,1 @@
+scoreboard players set animation.timer.tick hs_data 0

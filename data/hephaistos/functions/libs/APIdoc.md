@@ -45,23 +45,58 @@ root/
 pack.mcmeta
 ```
 
-## Caller
-The caller is a looped function checking if an altar need to check your crafts or import them.
+## Tick function
+The tick fuction is used to detect when an altar need to run the functions of your crafts.
 
 So in `root/data/minecraft/tags/functions/tick`, insert the path of `call.mcfunction`. Here in our exemple it will looks like this:
 ```json
 {
     "values": [
-        "<namespace>:hscrafts/call"
+        "<namespace>:hscrafts/tick"
     ]
 }
 ```
 
+Inside the `tick.mcfunction`, you can just copy and past this code, replacing \<YOURNAMESPACE> by the name of your namespace. It will be used as fake players and scoreboards names.
 
-# Effects & Visuals
+⚠ Set this to the namespace name of your datapack if you don't know precisely what you are doing.
 
-You can adds your visuals  or annimations easly in the craft !
+```mcfunction
+# crafts namespace : <YOURNAMESPACE>
 
-### Create my own with Hephaistos tools
+# import
+execute if score loadingCrafts hs_data matches 1 unless score <YOURNAMESPACE> hs_namespaceLoaded matches 1 run function <YOURNAMESPACE>:crafting/recipes.list
+execute if score loadingCrafts hs_data matches 1 unless score <YOURNAMESPACE> hs_namespaceLoaded matches 1 run scoreboard players set <YOURNAMESPACE> hs_namespaceLoaded 1
 
--> coming soon
+
+execute if score craftingOnAltar hs_data matches 0.. unless score <YOURNAMESPACE> hs_crafting_namesapceCheked matches 1 run execute as @e[type=marker,nbt={data:{ha:{altar_center:1b}}}] at @s if score @s hs_altarId = craftingOnAltar hs_data run function <YOURNAMESPACE>:crafting/recipes.list
+scoreboard players set <YOURNAMESPACE> hs_crafting_namesapceCheked 1
+```
+
+## Recipes.list function
+
+In Global Structure section as the name of `recipes.list.mcfuntion`, in it you will put all the recipes function (animations of the crafts not included).
+So if you want to temporary delete a recipe for testing/other reasons, you can just delete the line calling the recipe's function without delete the files or more code.
+
+
+If you want to add a new craft you just need to add a command like in that :
+```mcfunction
+execute as @s at @s run function <ressource location>
+```
+
+So in the Global Strucure exemple if all the crafts are loaded, `recipes.list.mcfunction` will looks like this :
+
+```mcfunction
+# list of all crafts loaded
+# delete here the function line of a specific craft to temporary disable it
+
+execute as @s at @s run function <namespace>:crafting/recipes/helpbook
+```
+
+Here again, you will have to change \<namespace> by the name you used as namespace.
+
+
+## Add a new craft
+
+Here we are ! We have now all the necessary structure to add all crafts we want !
+Go to [this page](https://github.com/Neylz/Hephaistos-Rituals/blob/main/data/hephaistos/functions/libs/APIcraft.md) for all the informations

@@ -3,3 +3,4 @@
 
 execute as @s at @s run function hephaistos:crafting/recipes/helpbook
 execute as @s at @s run function hephaistos:crafting/recipes/ee
+execute as @s at @s run function hephaistos:crafting/recipes/testanimate

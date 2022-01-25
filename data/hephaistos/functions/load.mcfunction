@@ -33,14 +33,16 @@ scoreboard players reset * hs_craftsLoaded
 scoreboard players reset * hs_namespaceLoaded
 scoreboard players reset * hs_crafting_itemsRAM
 scoreboard players reset * hs_crafting_itemsCounting
+scoreboard players reset * hs_crafting_craftsStages
 
 scoreboard players set craftingOnAltar hs_data -1
 scoreboard players set craftsLoaded hs_data 0
 scoreboard players set loadingCrafts hs_data 1
 schedule function hephaistos:altarcore/stoploadingrecipes 1s
+function hephaistos:animation.timer.reset
 
 
 #init loops
 function hephaistos:altarcore/checkstructure
 
-tellraw @a ["",{"text":"\u2756 ","color":"#4A4B4E"},{"text":"Hephaistos ","color":"#B41906","clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/customization/hephaistos-rituals"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Datapack Made by ","color":"dark_gray"},{"text":"Neylz","color":"gray"},{"text":"\n"},{"text":"Version ","color":"dark_gray"},{"text":"0.18.1","color":"gray"},{"text":"\n"},{"text":"Compatibility ","color":"dark_gray"},{"text":"1.18.x","color":"gray"},{"text":"\n"},{"text":"Is currently ","color":"dark_gray"},{"text":"installed","color":"green"}]}},{"text":"Rituals","color":"#4A4B4E","clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/customization/hephaistos-rituals"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Datapack Made by ","color":"dark_gray"},{"text":"Neylz","color":"gray"},{"text":"\n"},{"text":"Version ","color":"dark_gray"},{"text":"0.18.1","color":"gray"},{"text":"\n"},{"text":"Compatibility ","color":"dark_gray"},{"text":"1.18.x","color":"gray"},{"text":"\n"},{"text":"Is currently ","color":"dark_gray"},{"text":"installed","color":"green"}]}}]
+tellraw @a ["",{"text":"\u2756 ","color":"#4A4B4E"},{"text":"Hephaistos ","color":"#B41906","clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/customization/hephaistos-rituals"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Datapack Made by ","color":"dark_gray"},{"text":"Neylz","color":"gray"},{"text":"\n"},{"text":"Version ","color":"dark_gray"},{"text":"0.21","color":"gray"},{"text":"\n"},{"text":"Compatibility ","color":"dark_gray"},{"text":"1.18.x","color":"gray"},{"text":"\n"},{"text":"Is currently ","color":"dark_gray"},{"text":"installed","color":"green"}]}},{"text":"Rituals","color":"#4A4B4E","clickEvent":{"action":"open_url","value":"https://www.curseforge.com/minecraft/customization/hephaistos-rituals"},"hoverEvent":{"action":"show_text","contents":["",{"text":"Datapack Made by ","color":"dark_gray"},{"text":"Neylz","color":"gray"},{"text":"\n"},{"text":"Version ","color":"dark_gray"},{"text":"0.21","color":"gray"},{"text":"\n"},{"text":"Compatibility ","color":"dark_gray"},{"text":"1.18.x","color":"gray"},{"text":"\n"},{"text":"Is currently ","color":"dark_gray"},{"text":"installed","color":"green"}]}}]

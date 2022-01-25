@@ -1,6 +1,6 @@
 #altar center particle
-execute as @e[type=marker,nbt={data:{ha:{altar_center:1b}}}] at @s positioned ~ ~ ~ run particle minecraft:small_flame ^0.4 ^ ^
-execute as @e[type=marker,nbt={data:{ha:{altar_center:1b}}}] at @s run tp @s ~ ~ ~ ~10 ~
+execute as @e[type=marker,nbt={data:{ha:{altar_center:1b}}},tag=!hs_animation] at @s positioned ~ ~ ~ run particle minecraft:small_flame ^0.4 ^ ^
+execute as @e[type=marker,nbt={data:{ha:{altar_center:1b}}},tag=!hs_animation] at @s run tp @s ~ ~ ~ ~10 ~
 
 #detect if an item is at center
 execute as @e[type=marker,nbt={data:{ha:{altar_center:1b}}},tag=!hs_crafting] at @s if entity @e[type=item,distance=..1,tag=!hs_crafted] run execute as @s at @s run function hephaistos:altarcore/lockbeforecraft
@@ -21,3 +21,7 @@ execute as @e[tag=hs_craftRejected] at @s positioned ~ ~ ~ run tag @e[type=marke
 execute as @e[tag=hs_craftRejected] run scoreboard players set craftingOnAltar hs_data -1
 execute as @e[tag=hs_craftRejected] at @s positioned ~ ~ ~ run execute as @e[type=item,distance=..1] run data modify entity @s PickupDelay set value 10
 execute as @e[tag=hs_craftRejected] run tag @s remove hs_craftRejected
+
+
+#animation timer
+scoreboard players add animation.timer.tick hs_data 1
